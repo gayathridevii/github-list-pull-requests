@@ -31,9 +31,11 @@ function outputNumbers(list) {
 
 try {
   const token = core.getInput('token');
+  console.log("line after token")
   const repoOwner = github.context.repo.owner;
   const repo = github.context.repo.repo;
   const state = core.getInput('state');
+  console.log("line after state")
   let filterMs = parseInt(core.getInput('window')) * 3600000 // convert to milliseconds
   let targetDate = new Date(Date.now() - filterMs);
   
