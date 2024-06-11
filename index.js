@@ -16,7 +16,7 @@ function listPullRequests(token, repoOwner, repo, state) {
 
 function filterDate(pr, targetDate) {
   var createdAt =new Date(pr.created_at)
-  if (createdAt < targetDate) {
+  if (createdAt > targetDate) {
     return true;
   }
   return false;
