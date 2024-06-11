@@ -3,6 +3,7 @@ const github = require('@actions/github');
 
 function listPullRequests(token, repoOwner, repo, state) {
   const octokit = github.getOctokit(token);
+  console.log("heloooo")
   var pullRequests = octokit.rest.pulls.list({
     owner: repoOwner,
     repo: repo,
